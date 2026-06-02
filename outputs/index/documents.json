@@ -11,7 +11,9 @@
       "landmark",
       "Paris",
       "France",
-      "Eiffel Tower"
+      "Eiffel Tower",
+      "tower",
+      "iron lattice"
     ],
     "metadata": {
       "language": "en"
@@ -29,7 +31,144 @@
       "landmark",
       "Beijing",
       "China",
-      "Forbidden City"
+      "Forbidden City",
+      "imperial palace",
+      "Ming",
+      "Qing"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_statue_of_liberty",
+    "title": "Statue of Liberty",
+    "text": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor. A gift from the people of France to the United States, it was dedicated in 1886. Designed by Frederic Auguste Bartholdi with Gustave Eiffel engineering the iron framework, the copper-clad statue depicts a robed female figure holding a torch and a tablet inscribed with the date of the American Declaration of Independence.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "statue",
+      "landmark",
+      "New York",
+      "USA",
+      "Liberty",
+      "torch"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_great_wall",
+    "title": "Great Wall of China",
+    "text": "The Great Wall of China is a series of fortifications built across the historical northern borders of ancient Chinese states and Imperial China. The most famous sections were built by the Ming dynasty between the 14th and 17th centuries to defend against nomadic invasions. It is recognized as one of the largest construction projects ever completed and a UNESCO World Heritage Site.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "architecture",
+      "landmark",
+      "China",
+      "Great Wall",
+      "fortification",
+      "Ming dynasty"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_pyramids_giza",
+    "title": "Great Pyramid of Giza",
+    "text": "The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza pyramid complex in Egypt. Built around 2580 to 2560 BCE during the reign of Pharaoh Khufu, it served as a royal tomb. For over 3800 years it stood as the tallest human-made structure in the world.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "architecture",
+      "landmark",
+      "Egypt",
+      "pyramid",
+      "Giza",
+      "Khufu",
+      "tomb"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_colosseum",
+    "title": "Colosseum",
+    "text": "The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine limestone, tuff, and brick-faced concrete, it was completed in 80 CE under emperor Titus. The Colosseum could hold an estimated 50000 to 80000 spectators and was used for gladiatorial contests and public spectacles.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "architecture",
+      "landmark",
+      "Rome",
+      "Italy",
+      "amphitheatre",
+      "gladiator"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_sydney_opera",
+    "title": "Sydney Opera House",
+    "text": "The Sydney Opera House is a multi-venue performing arts centre on the shore of Sydney Harbour in Sydney, Australia. Designed by Danish architect Jorn Utzon and formally opened in 1973, it is famous for its series of large precast concrete shells that form the roofs of the structure. It is a UNESCO World Heritage Site.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "architecture",
+      "landmark",
+      "Sydney",
+      "Australia",
+      "opera house",
+      "Utzon"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_big_ben",
+    "title": "Big Ben",
+    "text": "Big Ben is the nickname for the Great Bell of the Great Clock of Westminster at the north end of the Palace of Westminster in London, England. The clock tower, officially renamed the Elizabeth Tower in 2012, stands 96 metres tall and is one of the most prominent symbols of the United Kingdom.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "architecture",
+      "landmark",
+      "London",
+      "UK",
+      "clock tower",
+      "Westminster"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "landmark_mount_fuji",
+    "title": "Mount Fuji",
+    "text": "Mount Fuji is the tallest mountain in Japan, standing 3776 metres high on the island of Honshu. It is an active stratovolcano that last erupted between 1707 and 1708. The exceptionally symmetrical cone is a frequent subject of Japanese art, including Hokusai's woodblock print series Thirty-six Views of Mount Fuji.",
+    "source": "local_demo/wiki_summary",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "mountain",
+      "landmark",
+      "Japan",
+      "Fuji",
+      "volcano",
+      "Honshu"
     ],
     "metadata": {
       "language": "en"
@@ -46,7 +185,97 @@
       "fire safety",
       "indoor",
       "red",
-      "equipment"
+      "equipment",
+      "extinguisher"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "object_umbrella",
+    "title": "Umbrella",
+    "text": "An umbrella is a folding canopy supported by wooden, metal, or plastic ribs that is mounted on a central pole. It is designed to protect a person from rain or sunlight. Modern compact umbrellas typically have a telescoping shaft and a fabric canopy stretched over collapsible ribs.",
+    "source": "local_demo/object_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "umbrella",
+      "rain",
+      "outdoor",
+      "everyday object"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "object_bicycle",
+    "title": "Bicycle",
+    "text": "A bicycle is a human-powered or motor-assisted vehicle with two wheels attached to a frame, propelled by pedals turning a chain that drives the rear wheel. The bicycle was invented in the 19th century and remains a popular form of transport, recreation, and competitive sport.",
+    "source": "local_demo/object_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "bicycle",
+      "bike",
+      "two wheels",
+      "transport",
+      "vehicle"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "object_microwave",
+    "title": "Microwave Oven",
+    "text": "A microwave oven is a kitchen appliance that heats and cooks food by exposing it to electromagnetic radiation in the microwave frequency range. The technology was developed from radar engineering after World War II and became a standard household appliance from the 1980s onwards.",
+    "source": "local_demo/object_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "microwave",
+      "kitchen",
+      "appliance",
+      "cooking",
+      "electromagnetic"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "object_stop_sign",
+    "title": "Stop Sign",
+    "text": "A stop sign is a regulatory traffic sign that instructs drivers to come to a complete stop and yield the right of way to crossing traffic and pedestrians. The modern octagonal red sign with white letters spelling STOP was standardized in the United States in 1954 and is now used in most countries.",
+    "source": "local_demo/object_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "stop sign",
+      "traffic",
+      "octagon",
+      "red",
+      "road safety"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "object_traffic_light",
+    "title": "Traffic Light",
+    "text": "A traffic light is a signaling device positioned at road intersections, pedestrian crossings, and other locations to control flows of traffic. The standard light uses three colors: red to stop, yellow to slow down, and green to proceed. The first electric traffic light was installed in Cleveland, Ohio in 1914.",
+    "source": "local_demo/object_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "traffic light",
+      "signal",
+      "red yellow green",
+      "intersection",
+      "road"
     ],
     "metadata": {
       "language": "en"
@@ -55,15 +284,274 @@
   {
     "id": "product_iphone",
     "title": "iPhone Smartphone",
-    "text": "The iPhone is a smartphone product line introduced by Apple. Common visual features include a rectangular touchscreen, a rear camera module, and the Apple logo. When answering questions about the model, release date, or specifications, the system should verify details using image evidence and reliable sources.",
+    "text": "The iPhone is a smartphone product line introduced by Apple. Common visual features include a rectangular touchscreen, a rear camera module, and the Apple logo. The first iPhone was released in 2007. When answering questions about the model, release date, or specifications, the system should verify details using image evidence and reliable sources.",
     "source": "local_demo/product_fact",
     "type": "text",
     "image_path": null,
     "tags": [
       "smartphone",
       "Apple",
+      "iPhone",
       "product",
       "electronics"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "product_macbook",
+    "title": "MacBook",
+    "text": "MacBook is a brand of Mac notebook computers manufactured by Apple. Recent MacBook Air and MacBook Pro models use Apple silicon chips and feature a unibody aluminum chassis, a Retina display, and a backlit Magic Keyboard. The line replaced the older PowerBook and iBook models in 2006.",
+    "source": "local_demo/product_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "MacBook",
+      "Apple",
+      "laptop",
+      "notebook",
+      "computer"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "product_tesla_model3",
+    "title": "Tesla Model 3",
+    "text": "The Tesla Model 3 is a battery electric mid-size sedan manufactured by Tesla, Inc. It was first delivered in 2017 and quickly became one of the best-selling electric vehicles in the world. Notable features include a minimalist interior centered on a 15-inch central touchscreen and Tesla's Autopilot driver-assistance system.",
+    "source": "local_demo/product_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "Tesla",
+      "Model 3",
+      "electric car",
+      "sedan",
+      "EV"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "animal_panda",
+    "title": "Giant Panda",
+    "text": "The giant panda is a bear native to south central China. It is characterized by its bold black-and-white coat and rotund body. Pandas live mainly in temperate bamboo forests and over 99 percent of their diet consists of bamboo shoots and leaves. They are a national symbol of China and an icon of wildlife conservation.",
+    "source": "local_demo/animal_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "panda",
+      "bear",
+      "China",
+      "bamboo",
+      "black and white",
+      "animal"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "animal_lion",
+    "title": "Lion",
+    "text": "The lion is a large cat of the genus Panthera native to Africa and India. It has a muscular, deep-chested body, a short rounded head, round ears, and a hairy tuft at the tip of its tail. Adult male lions typically have a prominent mane. Lions are social animals that live in groups called prides.",
+    "source": "local_demo/animal_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "lion",
+      "big cat",
+      "Africa",
+      "mane",
+      "pride",
+      "Panthera"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "animal_penguin",
+    "title": "Penguin",
+    "text": "Penguins are a group of aquatic flightless birds. They live almost exclusively in the Southern Hemisphere, with only one species, the Galapagos penguin, found north of the equator. Highly adapted for life in water, penguins have countershaded dark and white plumage and flippers for swimming.",
+    "source": "local_demo/animal_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "penguin",
+      "bird",
+      "Antarctica",
+      "aquatic",
+      "flightless",
+      "black and white"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "animal_owl",
+    "title": "Owl",
+    "text": "Owls are birds from the order Strigiformes which includes over 200 species of mostly solitary and nocturnal birds of prey. They are characterized by an upright stance, a large broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.",
+    "source": "local_demo/animal_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "owl",
+      "bird of prey",
+      "nocturnal",
+      "Strigiformes",
+      "raptor"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "food_pizza",
+    "title": "Pizza",
+    "text": "Pizza is a dish of Italian origin consisting of a usually round flat base of leavened wheat-based dough topped with tomato sauce, cheese, and often various other ingredients such as cured meats, vegetables, and herbs, which is then baked at a high temperature in a wood-fired or electric oven.",
+    "source": "local_demo/food_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "pizza",
+      "food",
+      "Italian",
+      "cheese",
+      "tomato",
+      "dough"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "food_sushi",
+    "title": "Sushi",
+    "text": "Sushi is a traditional Japanese dish of prepared vinegared rice, usually with some sugar and salt, served with a variety of ingredients such as seafood, vegetables, and occasionally tropical fruits. Styles of sushi and its presentation vary widely, but the one key ingredient is sushi rice, also referred to as shari or sumeshi.",
+    "source": "local_demo/food_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "sushi",
+      "Japanese food",
+      "rice",
+      "seafood",
+      "raw fish"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "food_hamburger",
+    "title": "Hamburger",
+    "text": "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bun or bread roll. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or chiles, and condiments such as ketchup, mustard, mayonnaise, relish, or special sauce.",
+    "source": "local_demo/food_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "hamburger",
+      "burger",
+      "beef",
+      "sandwich",
+      "fast food"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "food_apple",
+    "title": "Apple Fruit",
+    "text": "An apple is an edible fruit produced by an apple tree of the species Malus domestica. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. Apples have been grown for thousands of years and come in red, green, and yellow varieties.",
+    "source": "local_demo/food_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "apple",
+      "fruit",
+      "Malus",
+      "red",
+      "green",
+      "tree"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "plant_rose",
+    "title": "Rose",
+    "text": "A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars. Roses form a group of plants that can be erect shrubs, climbing, or trailing, with stems often armed with sharp prickles.",
+    "source": "local_demo/plant_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "rose",
+      "flower",
+      "Rosa",
+      "plant",
+      "red",
+      "romantic"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "plant_bonsai",
+    "title": "Bonsai",
+    "text": "Bonsai is a Japanese art form using cultivation techniques to produce, in containers, small trees that mimic the shape and scale of full-size trees. Similar practices exist in other cultures, including the Chinese tradition of penjing from which the art originated.",
+    "source": "local_demo/plant_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "bonsai",
+      "Japanese art",
+      "tree",
+      "miniature",
+      "container"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "vehicle_hot_air_balloon",
+    "title": "Hot Air Balloon",
+    "text": "A hot air balloon is a lighter-than-air aircraft consisting of a bag, called an envelope, that contains heated air. Suspended beneath is a gondola or wicker basket that carries passengers and a source of heat such as a propane burner. The first untethered manned flight was made by the Montgolfier brothers in 1783.",
+    "source": "local_demo/vehicle_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "hot air balloon",
+      "aircraft",
+      "Montgolfier",
+      "flight",
+      "gondola"
+    ],
+    "metadata": {
+      "language": "en"
+    }
+  },
+  {
+    "id": "vehicle_aircraft_carrier",
+    "title": "Aircraft Carrier",
+    "text": "An aircraft carrier is a warship that serves as a seagoing airbase, equipped with a full-length flight deck and facilities for carrying, arming, deploying, and recovering aircraft. Modern carriers are typically nuclear-powered and form the centerpiece of a fleet's operations.",
+    "source": "local_demo/vehicle_fact",
+    "type": "text",
+    "image_path": null,
+    "tags": [
+      "aircraft carrier",
+      "warship",
+      "navy",
+      "flight deck",
+      "military"
     ],
     "metadata": {
       "language": "en"

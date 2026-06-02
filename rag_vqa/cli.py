@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .config import Settings
 from .debug import debug_dump
+from .eval import okvqa_eval, retrieval_eval
 from .pipeline import RAGVQAPipeline
 from .retriever import KnowledgeBase
 
@@ -43,6 +44,70 @@ def ask(args: argparse.Namespace) -> None:
     result = pipeline.ask(args.image, args.question, top_k=args.top_k)
     payload = asdict(result)
     print(json.dumps(payload, ensure_ascii=False, indent=2))
+
+
+def eval_retrieval(args: argparse.Namespace) -> None:
+    settings = Settings(
+        text_weight=1.0,
+        image_weight=0.0,
+        min_evidence_score=-1.0,
+        enable_generator=False,
+        enable_blip_vqa=False,
+        debug=args.debug,
+    )
+    debug_dump(settings, "cli.eval_retrieval.args", vars(args))
+
+    index_dir = Path(args.index_dir) if args.index_dir else None
+    if index_dir and (index_dir / "documents.json").exists():
+        kb = KnowledgeBase.load(index_dir, settings=settings)
+    else:
+        kb = KnowledgeBase.from_jsonl(args.kb, settings=settings)
+
+    caption_fn = None
+    if args.use_blip_caption:
+        from .vision import ImageDescriber
+
+        describer = ImageDescriber(settings.caption_model, settings=settings)
+        caption_fn = describer.describe
+
+    result = retrieval_eval.run(args.eval, kb, output_path=args.output, caption_fn=caption_fn)
+    print(retrieval_eval.format_summary(result))
+    if args.output:
+        print(f"\nWrote per-sample report to {args.output}")
+
+
+def eval_okvqa(args: argparse.Namespace) -> None:
+    settings = Settings(
+        top_k=args.top_k,
+        debug=args.debug,
+        cache_caption=args.cache_caption,
+        caption_cache_path=args.caption_cache,
+    )
+    debug_dump(settings, "cli.eval_okvqa.args", vars(args))
+
+    index_dir = Path(args.index_dir)
+    if (index_dir / "documents.json").exists():
+        kb = KnowledgeBase.load(index_dir, settings=settings)
+    else:
+        kb = KnowledgeBase.from_jsonl(args.kb, settings=settings)
+
+    result = okvqa_eval.run(
+        args.questions,
+        args.annotations,
+        args.images_dir,
+        kb,
+        output_path=args.output,
+        settings=settings,
+        enable_web=args.web,
+        top_k=args.top_k,
+        limit=args.limit,
+    )
+    print(
+        f"OKVQA accuracy: {result.overall_accuracy * 100:.2f}  "
+        f"(N={result.num_samples}, elapsed={result.elapsed_seconds:.1f}s)"
+    )
+    if args.output:
+        print(f"Wrote detailed report to {args.output}")
 
 
 def serve(args: argparse.Namespace) -> None:
@@ -93,6 +158,38 @@ def make_parser() -> argparse.ArgumentParser:
     p_ask.add_argument("--web", action="store_true", help="Enable Wikipedia evidence retrieval")
     p_ask.add_argument("--debug", action="store_true", help="Print intermediate variables to stderr")
     p_ask.set_defaults(func=ask)
+
+    p_eval_retrieval = sub.add_parser(
+        "eval-retrieval", help="Compare baseline vs joint-query retrieval coverage"
+    )
+    p_eval_retrieval.add_argument("--eval", default="data/eval/retrieval_eval.jsonl")
+    p_eval_retrieval.add_argument("--kb", default="data/knowledge_base/sample_knowledge.jsonl")
+    p_eval_retrieval.add_argument("--index-dir", default="outputs/index")
+    p_eval_retrieval.add_argument(
+        "--output", default="outputs/retrieval_eval.json", help="Where to write the per-sample report"
+    )
+    p_eval_retrieval.add_argument(
+        "--use-blip-caption",
+        action="store_true",
+        help="Run BLIP for captions when an eval sample has an image but no synthetic_caption",
+    )
+    p_eval_retrieval.add_argument("--debug", action="store_true")
+    p_eval_retrieval.set_defaults(func=eval_retrieval)
+
+    p_eval_okvqa = sub.add_parser("eval-okvqa", help="Score the pipeline on OKVQA val")
+    p_eval_okvqa.add_argument("--questions", required=True, help="OKVQA OpenEnded questions JSON")
+    p_eval_okvqa.add_argument("--annotations", required=True, help="OKVQA annotations JSON")
+    p_eval_okvqa.add_argument("--images-dir", required=True, help="Directory containing COCO val2014 images")
+    p_eval_okvqa.add_argument("--kb", default="data/knowledge_base/okvqa_kb.jsonl")
+    p_eval_okvqa.add_argument("--index-dir", default="outputs/okvqa_index")
+    p_eval_okvqa.add_argument("--output", default="outputs/okvqa_eval.json")
+    p_eval_okvqa.add_argument("--top-k", type=int, default=5)
+    p_eval_okvqa.add_argument("--limit", type=int, default=None, help="Evaluate only the first N samples")
+    p_eval_okvqa.add_argument("--web", action="store_true", help="Enable Wikipedia retrieval (slow)")
+    p_eval_okvqa.add_argument("--cache-caption", action="store_true", help="Cache BLIP captions to disk")
+    p_eval_okvqa.add_argument("--caption-cache", default="outputs/caption_cache.json")
+    p_eval_okvqa.add_argument("--debug", action="store_true")
+    p_eval_okvqa.set_defaults(func=eval_okvqa)
 
     p_serve = sub.add_parser("serve", help="Run a Gradio demo")
     p_serve.add_argument("--kb", default="data/knowledge_base/sample_knowledge.jsonl")

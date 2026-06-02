@@ -1,0 +1,55 @@
+{"qid":"q01","question":"What is the historical significance of this iron tower?","synthetic_caption":"a tall iron lattice tower at night in paris","gold_doc_ids":["landmark_eiffel"]}
+{"qid":"q02","question":"When was this monument built and why?","synthetic_caption":"a famous wrought iron tower seen from a riverbank","gold_doc_ids":["landmark_eiffel"]}
+{"qid":"q03","question":"Who built this palace and during which dynasty?","synthetic_caption":"a large red walled imperial palace with golden roofs in beijing","gold_doc_ids":["landmark_forbidden_city"]}
+{"qid":"q04","question":"Which dynasty used this complex as the royal residence?","synthetic_caption":"a traditional chinese palace courtyard with red walls","gold_doc_ids":["landmark_forbidden_city"]}
+{"qid":"q05","question":"Where is this green statue of a robed woman with a torch located?","synthetic_caption":"a green statue of a woman holding a torch on an island","gold_doc_ids":["landmark_statue_of_liberty"]}
+{"qid":"q06","question":"Who designed the framework of this colossal copper statue?","synthetic_caption":"a tall copper statue holding a torch","gold_doc_ids":["landmark_statue_of_liberty"]}
+{"qid":"q07","question":"Why was this long fortification originally built?","synthetic_caption":"a long stone wall winding across mountain ridges","gold_doc_ids":["landmark_great_wall"]}
+{"qid":"q08","question":"Which dynasty built most of the famous sections of this wall?","synthetic_caption":"a stone wall with watchtowers stretching over green mountains","gold_doc_ids":["landmark_great_wall"]}
+{"qid":"q09","question":"For which pharaoh was this giant pyramid originally built?","synthetic_caption":"a huge stone pyramid in a desert","gold_doc_ids":["landmark_pyramids_giza"]}
+{"qid":"q10","question":"How old is this pyramid and what was its purpose?","synthetic_caption":"three pyramids of different sizes in the egyptian desert","gold_doc_ids":["landmark_pyramids_giza"]}
+{"qid":"q11","question":"What was this ancient amphitheatre used for?","synthetic_caption":"a large oval roman amphitheatre with arches","gold_doc_ids":["landmark_colosseum"]}
+{"qid":"q12","question":"In which city is this oval amphitheatre located?","synthetic_caption":"a ruined stone amphitheatre in italy at sunset","gold_doc_ids":["landmark_colosseum"]}
+{"qid":"q13","question":"Who designed the shell-shaped roof of this performing arts centre?","synthetic_caption":"a white sail-shaped concrete shell building by the harbour","gold_doc_ids":["landmark_sydney_opera"]}
+{"qid":"q14","question":"What is the distinctive architectural feature of this opera house?","synthetic_caption":"a building with white shell-like roofs near the water","gold_doc_ids":["landmark_sydney_opera"]}
+{"qid":"q15","question":"What is the official name of this clock tower in London?","synthetic_caption":"a tall gothic clock tower next to a parliament building","gold_doc_ids":["landmark_big_ben"]}
+{"qid":"q16","question":"How tall is this famous clock tower in the United Kingdom?","synthetic_caption":"a stone clock tower at the palace of westminster","gold_doc_ids":["landmark_big_ben"]}
+{"qid":"q17","question":"Which Japanese artist made woodblock prints of this mountain?","synthetic_caption":"a snow capped symmetrical volcano in japan","gold_doc_ids":["landmark_mount_fuji"]}
+{"qid":"q18","question":"How tall is this volcano and when did it last erupt?","synthetic_caption":"a snowy conical mountain rising above lakes","gold_doc_ids":["landmark_mount_fuji"]}
+{"qid":"q19","question":"What is this red device used for?","synthetic_caption":"a red cylinder mounted on a wall in a hallway","gold_doc_ids":["object_fire_extinguisher"]}
+{"qid":"q20","question":"What are the typical visual features of this firefighting device?","synthetic_caption":"a red fire extinguisher with a hose and pressure gauge","gold_doc_ids":["object_fire_extinguisher"]}
+{"qid":"q21","question":"What is this folding canopy used to protect against?","synthetic_caption":"a person holding a black umbrella in the rain","gold_doc_ids":["object_umbrella"]}
+{"qid":"q22","question":"How does this two wheeled vehicle move forward?","synthetic_caption":"a person riding a bicycle on a city street","gold_doc_ids":["object_bicycle"]}
+{"qid":"q23","question":"What kind of radiation does this kitchen appliance use to heat food?","synthetic_caption":"a microwave oven sitting on a kitchen counter","gold_doc_ids":["object_microwave"]}
+{"qid":"q24","question":"What does this red octagonal road sign instruct drivers to do?","synthetic_caption":"a red octagonal stop sign at an intersection","gold_doc_ids":["object_stop_sign"]}
+{"qid":"q25","question":"What do the three colors on this signaling device mean?","synthetic_caption":"a traffic light showing red yellow and green at an intersection","gold_doc_ids":["object_traffic_light"]}
+{"qid":"q26","question":"In what year was the first electric version of this signal installed?","synthetic_caption":"a traffic signal with three lights above a road","gold_doc_ids":["object_traffic_light"]}
+{"qid":"q27","question":"What company makes this smartphone and when was the first one released?","synthetic_caption":"a black smartphone with a rear camera module showing the apple logo","gold_doc_ids":["product_iphone"]}
+{"qid":"q28","question":"What chips do recent versions of this aluminum laptop use?","synthetic_caption":"a silver aluminum laptop with an apple logo on the lid","gold_doc_ids":["product_macbook"]}
+{"qid":"q29","question":"What size is the central touchscreen inside this electric sedan?","synthetic_caption":"the minimalist interior of a tesla electric car with a large touchscreen","gold_doc_ids":["product_tesla_model3"]}
+{"qid":"q30","question":"In what year was this electric mid size sedan first delivered?","synthetic_caption":"a white electric sedan parked at a charging station","gold_doc_ids":["product_tesla_model3"]}
+{"qid":"q31","question":"What does this black and white bear eat?","synthetic_caption":"a black and white panda bear sitting in a bamboo forest","gold_doc_ids":["animal_panda"]}
+{"qid":"q32","question":"Where in the world does this bamboo eating bear live?","synthetic_caption":"a giant panda climbing a tree","gold_doc_ids":["animal_panda"]}
+{"qid":"q33","question":"What is the social group of this large maned cat called?","synthetic_caption":"a male lion with a thick mane resting in the savanna","gold_doc_ids":["animal_lion"]}
+{"qid":"q34","question":"What feature is most distinctive of this big cat from africa?","synthetic_caption":"a lion roaring on a rocky outcrop","gold_doc_ids":["animal_lion"]}
+{"qid":"q35","question":"In which hemisphere do these flightless aquatic birds mostly live?","synthetic_caption":"a group of penguins standing on ice","gold_doc_ids":["animal_penguin"]}
+{"qid":"q36","question":"What are the unique adaptations of this nocturnal bird of prey?","synthetic_caption":"a brown owl perched on a tree branch at night","gold_doc_ids":["animal_owl"]}
+{"qid":"q37","question":"Where did this round flat baked dish originate?","synthetic_caption":"a slice of pizza with melted cheese and pepperoni","gold_doc_ids":["food_pizza"]}
+{"qid":"q38","question":"What is the key ingredient of this Japanese rice dish?","synthetic_caption":"a plate of sushi rolls with raw fish and seaweed","gold_doc_ids":["food_sushi"]}
+{"qid":"q39","question":"What is typically inside this sandwich with a cooked patty?","synthetic_caption":"a hamburger with lettuce tomato and cheese in a bun","gold_doc_ids":["food_hamburger"]}
+{"qid":"q40","question":"What is the scientific species name of this common red fruit?","synthetic_caption":"a red apple on a wooden table","gold_doc_ids":["food_apple"]}
+{"qid":"q41","question":"What family does this thorny flowering plant belong to?","synthetic_caption":"a red rose flower in full bloom","gold_doc_ids":["plant_rose"]}
+{"qid":"q42","question":"From which Chinese tradition did this miniature tree art originate?","synthetic_caption":"a small bonsai tree in a ceramic pot","gold_doc_ids":["plant_bonsai"]}
+{"qid":"q43","question":"What gas or substance keeps this lighter than air aircraft afloat?","synthetic_caption":"a colorful hot air balloon floating above a valley","gold_doc_ids":["vehicle_hot_air_balloon"]}
+{"qid":"q44","question":"Who made the first untethered manned flight in this kind of aircraft?","synthetic_caption":"a hot air balloon ascending at sunrise","gold_doc_ids":["vehicle_hot_air_balloon"]}
+{"qid":"q45","question":"What kind of warship is this with a long flight deck?","synthetic_caption":"a large grey warship with a flat flight deck full of jets","gold_doc_ids":["vehicle_aircraft_carrier"]}
+{"qid":"q46","question":"How are most modern versions of this seagoing airbase powered?","synthetic_caption":"an aircraft carrier sailing in the open ocean","gold_doc_ids":["vehicle_aircraft_carrier"]}
+{"qid":"q47","question":"Which company designed this iron lattice tower in Paris?","synthetic_caption":"the eiffel tower lit up in golden light at dusk","gold_doc_ids":["landmark_eiffel"]}
+{"qid":"q48","question":"What architectural style does this Beijing complex follow?","synthetic_caption":"aerial view of the forbidden city palace complex","gold_doc_ids":["landmark_forbidden_city"]}
+{"qid":"q49","question":"On which island in New York harbor does this statue stand?","synthetic_caption":"the statue of liberty viewed from a ferry","gold_doc_ids":["landmark_statue_of_liberty"]}
+{"qid":"q50","question":"What heritage status does this Australian opera house hold?","synthetic_caption":"the sydney opera house with its white shell roofs","gold_doc_ids":["landmark_sydney_opera"]}
+{"qid":"q51","question":"What is the typical color and shape of this firefighting device?","synthetic_caption":"a wall mounted fire extinguisher in a corridor","gold_doc_ids":["object_fire_extinguisher"]}
+{"qid":"q52","question":"What product line did this MacBook brand replace in 2006?","synthetic_caption":"a macbook laptop open on a desk","gold_doc_ids":["product_macbook"]}
+{"qid":"q53","question":"What animal is the national symbol of China?","synthetic_caption":"a giant panda chewing bamboo leaves","gold_doc_ids":["animal_panda"]}
+{"qid":"q54","question":"What do you call a group of these big cats?","synthetic_caption":"a pride of lions resting under a tree","gold_doc_ids":["animal_lion"]}
+{"qid":"q55","question":"What is the only species of this bird found north of the equator?","synthetic_caption":"a penguin standing on a rocky shore","gold_doc_ids":["animal_penguin"]}

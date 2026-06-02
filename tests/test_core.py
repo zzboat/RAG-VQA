@@ -3,6 +3,8 @@ from __future__ import annotations
 from PIL import Image
 
 from rag_vqa.config import Settings
+from rag_vqa.eval import retrieval_eval
+from rag_vqa.eval.okvqa_eval import extract_short_answer, normalize_answer, soft_accuracy
 from rag_vqa.query import QueryGenerator
 from rag_vqa.retriever import KnowledgeBase
 from rag_vqa.schemas import Document
@@ -117,3 +119,88 @@ def test_answer_generator_stays_disabled_when_generation_off() -> None:
     assert generator._model is None
     assert generator._tokenizer is None
     assert generator._device == "cpu"
+
+
+def _make_retrieval_kb() -> KnowledgeBase:
+    settings = Settings(
+        enable_generator=False,
+        enable_blip_vqa=False,
+        text_weight=1.0,
+        image_weight=0.0,
+        min_evidence_score=-1.0,
+        top_k=10,
+    )
+    docs = [
+        Document(
+            id="fire",
+            title="Fire Extinguisher",
+            text="A red portable firefighting cylinder used to put out small fires indoors.",
+            source="test",
+            tags=["fire", "extinguisher", "red", "firefighting"],
+        ),
+        Document(
+            id="phone",
+            title="iPhone Smartphone",
+            text="A rectangular smartphone made by Apple with a touchscreen and rear camera.",
+            source="test",
+            tags=["smartphone", "iphone", "apple", "phone"],
+        ),
+        Document(
+            id="panda",
+            title="Giant Panda",
+            text="A black and white bear from China that mostly eats bamboo shoots and leaves.",
+            source="test",
+            tags=["panda", "bear", "china", "bamboo"],
+        ),
+    ]
+    kb = KnowledgeBase(settings=settings, docs=docs)
+    kb.build()
+    return kb
+
+
+def test_retrieval_eval_baseline_vs_full() -> None:
+    kb = _make_retrieval_kb()
+    samples = [
+        retrieval_eval.RetrievalSample(
+            qid="t1",
+            question="What is this?",
+            gold_doc_ids=["fire"],
+            synthetic_caption="a red fire extinguisher mounted on the wall",
+        ),
+        retrieval_eval.RetrievalSample(
+            qid="t2",
+            question="What animal is shown?",
+            gold_doc_ids=["panda"],
+            synthetic_caption="a giant panda eating bamboo in a forest",
+        ),
+    ]
+    result = retrieval_eval.evaluate(samples, kb, ks=(1, 3))
+    assert result["num_samples"] == 2
+    assert "hit@1" in result["aggregated"]["baseline"]
+    assert "recall@3" in result["aggregated"]["full"]
+    full_hit3 = result["aggregated"]["full"]["hit@3"]
+    base_hit3 = result["aggregated"]["baseline"]["hit@3"]
+    assert full_hit3 >= base_hit3 - 1e-9
+
+
+def test_okvqa_soft_accuracy_matches_official_examples() -> None:
+    assert soft_accuracy("red", ["red"] * 10) == 1.0
+    assert soft_accuracy("red", ["yellow"] * 10) == 0.0
+    # 3 of 10 annotators say "red": 7 leave-one-out sets keep all 3 matches, so
+    # 7/10 of subsets get full credit and the remaining 3/10 each get 2/3.
+    expected = (7 * 1.0 + 3 * (2.0 / 3.0)) / 10.0
+    assert abs(soft_accuracy("red", ["yellow"] * 7 + ["red"] * 3) - expected) < 1e-9
+    # 1 match in 10 gives 9 subsets with 1 match each (1/3), 1 subset with 0 -> mean 0.3.
+    assert abs(soft_accuracy("red", ["red"] + ["green"] * 9) - 0.3) < 1e-9
+
+
+def test_okvqa_normalize_handles_punctuation_and_articles() -> None:
+    assert normalize_answer("a Red Apple.") == "red apple"
+    assert normalize_answer("the One.") == "1"
+    assert normalize_answer("Don't") == "don't"
+
+
+def test_okvqa_extract_short_answer_strips_citations() -> None:
+    raw = "The image shows a red fire extinguisher [1]. It is used to put out small fires."
+    assert extract_short_answer(raw).startswith("the image shows")
+    assert "[1]" not in extract_short_answer(raw)

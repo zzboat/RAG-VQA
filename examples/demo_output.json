@@ -1,0 +1,51 @@
+{
+  "_about": "Sample output of `python -m rag_vqa.cli ask --image ... --question ...` showing the four-channel evidence fusion: visual caption, visual VQA answer, local KB evidence and (optional) web evidence. Replay locally via `scripts/run_demo.ps1`.",
+  "question": "What is the historical significance of this iron tower?",
+  "image": "examples/eiffel_demo.jpg",
+  "answer": "The image shows the Eiffel Tower in Paris, completed in 1889 to mark the centennial of the French Revolution and to serve as the centrepiece of the 1889 World's Fair. Designed by Gustave Eiffel's company, it has long been regarded as a global symbol of Paris and France [1].",
+  "visual_caption": "a tall iron lattice tower at night in paris",
+  "visual_answer": "eiffel tower",
+  "query": {
+    "question": "What is the historical significance of this iron tower?",
+    "visual_caption": "a tall iron lattice tower at night in paris",
+    "text_query": "historical significance iron tower paris a tall iron lattice tower at night in paris",
+    "keywords": ["historical", "significance", "iron", "tower", "paris", "tall", "lattice", "night"]
+  },
+  "evidences": [
+    {
+      "id": "landmark_eiffel",
+      "title": "Eiffel Tower",
+      "content": "The Eiffel Tower stands on the Champ de Mars in Paris, France. Completed in 1889, it was built to commemorate the centennial of the French Revolution and to serve as a centerpiece of the 1889 World's Fair. Designed by Gustave Eiffel's company, it has long been regarded as a symbol of Paris and France.",
+      "source": "local_demo/wiki_summary",
+      "type": "text",
+      "score": 0.84,
+      "metadata": {
+        "language": "en",
+        "image_path": null,
+        "tags": ["architecture", "landmark", "Paris", "France", "Eiffel Tower"]
+      }
+    },
+    {
+      "id": "wiki:Eiffel Tower",
+      "title": "Eiffel Tower",
+      "content": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris. It is named after Gustave Eiffel whose company designed and built the tower from 1887 to 1889. Locally nicknamed La dame de fer, it was constructed as the centrepiece of the 1889 World's Fair.",
+      "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+      "type": "web_text",
+      "score": 0.78,
+      "metadata": {}
+    },
+    {
+      "id": "landmark_statue_of_liberty",
+      "title": "Statue of Liberty",
+      "content": "A gift from the people of France to the United States, dedicated in 1886. Designed by Frederic Auguste Bartholdi with Gustave Eiffel engineering the iron framework...",
+      "source": "local_demo/wiki_summary",
+      "type": "text",
+      "score": 0.41,
+      "metadata": {
+        "language": "en",
+        "image_path": null,
+        "tags": ["statue", "landmark", "New York", "USA", "Liberty"]
+      }
+    }
+  ]
+}
