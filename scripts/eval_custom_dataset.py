@@ -52,10 +52,10 @@ def is_visual_only(question: str) -> bool:
 
 def main():
     dataset_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
-        "/home/sunye_2/zhangchuhan/dataset/rag-vqa/rag_vqa_question_answer_image.json"
+        "TODO: replace with your dataset path"
     )
     images_base = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(
-        "/home/sunye_2/zhangchuhan/dataset/rag-vqa"
+        "TODO: replace with your images base path"
     )
     kb_path = Path(sys.argv[3]) if len(sys.argv) > 3 else PROJECT_ROOT / "data/knowledge_base/custom_kb.jsonl"
     index_dir = Path(sys.argv[4]) if len(sys.argv) > 4 else PROJECT_ROOT / "outputs/custom_index"
